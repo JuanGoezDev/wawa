@@ -2,30 +2,27 @@
     box-sizing: border-box;
 }
 
-body {
+.body_container {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     font-size: 1em;
 }
 
-p {
-    margin: 0;
-}
 
-a {
+.a_icon {
     text-decoration: none;
     color: inherit;
     margin: 0;
 }
 
-h1 {
+.header_content {
     margin: 0;
     padding: 5px;
     text-align: center;
 }
 
-header {
+.header_title {
     background: #fff;
     color:#49BDC0;
     border-bottom-style: solid;
@@ -33,7 +30,7 @@ header {
     border-bottom-color: #49BDC0;
 }
 
-.container {
+.div_container {
     padding: 100%;
     background-color: #E5E5E5;
 }
