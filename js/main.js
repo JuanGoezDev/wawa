@@ -10,7 +10,18 @@ function page(pageOut1, pageOut2, pageIn) {
     if(document.getElementById(pageOut2).className != "ocultar"){
         document.getElementById(pageOut2).className += " ocultar";
     }
-    
+    //cambio de color del fondo al moverse entre vistas, eliminar este codigo despues de las evidencias
+    if(pageIn == "cursos"){
+        document.getElementById("div_container").style.backgroundColor = "#E5E5E5";
+    }
+
+    if(pageIn == "articulos"){
+        document.getElementById("div_container").style.backgroundColor = "black";
+    }
+    if(pageIn == "juego"){
+        document.getElementById("div_container").style.backgroundColor = "white";
+    }
+    //Eliminar hasta acá
     document.getElementById(pageIn).classList.remove("ocultar");
     window.scroll(0, document.getElementById(pageIn).scrollTop);
 }
