@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+.body_container {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+.a_icon {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+}
+
+.header_content {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.header_title {
+    background: #fff;
+    color: #49BDC0;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #49BDC0;
+}
+
+.div_container {
+    padding-bottom: 40%;
+    background-color: #E5E5E5;
+}
+
+.main-navigation {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: #49BDC0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    color: #49BDC0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    width: calc(100vw / 4.6);
+    padding: 10px;
+}
+
+nav p {
+    font-size: .9em;
+}
+
+nav li:hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+@media (max-width: 782px) {
+    nav li {
+        width: calc(100vw / 4.6);
+    }
+    .fa-2x {
+        font-size: 1.8em;
+    }
+    nav p {
+        display: none;
+    }
+    .div_container {
+        padding-bottom: 140%;
+    }
+}
+
+.ocultar {
+    display: none !important;
+}
+
+.demo-card-square.mdl-card {
+    width: 320px;
+    height: 520px;
+}
+
+.demo-card-square>.mdl-card__title {
+    color: #fff;
+}
+
+#video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+video {
+    width: 330px;
+    height: 150px;
+}
+
+#imgCarrusel {
+    width: 330px;
+    height: 150px;
+}
+
+/* Estilos carrusel*/
+
+.carrousel {
+    background: #ffffff;
+    text-align: center;
+    padding: 0;
+    height: 210px;
+    max-width: 330px;
+    margin: 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+.carrousel .slides {
+    margin: 0;
+    width: 400%;
+    left: 0;
+    padding-left: 0;
+    padding-top: 0;
+    overflow: hidden;
+    list-style: none;
+    position: relative;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s;
+}
+
+.carrousel .slides li {
+    width: 25%;
+    position: relative;
+    float: left;
+}
+
+.carrousel li p {
+    margin-top: 0;
+}
+
+.carrousel li q {    
+    position: relative;
+    top: 5px;
+    left: -120px;
+    max-width: 100%;
+    color: rgba(0,0,0,.87);
+    font-size: 23px;
+    text-align: left;
+}
+
+.carrousel li q::before{
+    content: none;
+}
+
+.carrousel li q::after{
+    content: none;
+}
+
+.carrousel li img {
+    width: 330px;
+    height: 130px;
+}
+
+.carrousel li span.author {
+    position: relative;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #777777;
+    display: block;
+    left: -95px;
+}
+
+.carrousel .slidesNavigation {
+    display: block;
+    list-style: none;
+    text-align: center;
+    bottom: 0em;
+    /*--- Centering trick---*/
+    /* Absolute positioning*/
+    position: absolute;
+    /* Abosulte positioning*/
+    width: 104px;
+    /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
+    left: 50%;
+    /*Centering de element*/
+    margin-left: -52px;
+    /*adjusting the centering by applying a negative margin of half of the width*/
+}
+
+.carrousel input {
+    display: none;
+}
+
+.carrousel .slidesNavigation label {
+    float: left;
+    margin: 6px;
+    display: block;
+    height: 13px;
+    width: 13px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 2px #2980b9;
+    font-size: 0;
+}
+
+/* You have to repeat this with each slide
+  TODO: make it easier with SCSS
+  25% movement 100/slides-num
+  */
+
+#radio-1:checked~.slides {
+    transform: translateX(0%);
+}
+
+#radio-2:checked~.slides {
+    transform: translateX(-25%);
+}
+
+#radio-3:checked~.slides {
+    transform: translateX(-50%);
+}
+
+#radio-4:checked~.slides {
+    transform: translateX(-75%);
+}
+
+.carrousel .slidesNavigation label:hover {
+    cursor: pointer;
+}
+
+/* You have to repeat this with each slide/dot */
+
+.carrousel #radio-1:checked~.slidesNavigation label#dotForRadio-1, .carrousel #radio-2:checked~.slidesNavigation label#dotForRadio-2, .carrousel #radio-3:checked~.slidesNavigation label#dotForRadio-3, .carrousel #radio-4:checked~.slidesNavigation label#dotForRadio-4 {
+    background: #ee6a1e;
+}
+
+@media (max-width: 796px) {
+    .carrousel {
+        height: 220px;
+    }
+}
+
+@media (max-width: 330px) {
+    .carrousel li p {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    .carrousel li q {
+        font-size: 1em;
+    }
+    .carrousel li img {
+        width: 316px;
+        height: 154px;
+    }
+}
