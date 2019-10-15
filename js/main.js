@@ -19,7 +19,7 @@ function page(pageOut1, pageOut2, pageIn) {
         document.getElementById("div_container").style.backgroundColor = "black";
     }
     if(pageIn == "juego"){
-        document.getElementById("div_container").style.backgroundColor = "white";
+        document.getElementById("div_container").style.backgroundColor = "red";
     }
     //Eliminar hasta acá
     document.getElementById(pageIn).classList.remove("ocultar");
