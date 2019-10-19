@@ -71,6 +71,26 @@ section{
     padding-top:10px;
 }
 
+.foto_Creador{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color:#49BDC0;
+}
+#div_container_creditos{
+    margin-top: 6%;
+}
+#div_creador{
+
+    margin-left: 32%;
+    float: left;
+}
+#div_creador_2{
+    margin-left: 62%;
+}
+
 @media (max-width: 782px) {
     nav li {
         width: calc(100vw / 4.6);
@@ -252,6 +272,15 @@ video {
 @media (max-width: 796px) {
     .carrousel {
         height: 220px;
+    }
+    #div_creador{
+
+        margin-left: 10%;
+        float: left;
+    }
+    #div_container {
+        padding-bottom: 100%;
+        background-color: #E5E5E5;
     }
 }
 

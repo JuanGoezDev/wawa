@@ -25,7 +25,7 @@ function page(pageOut1, pageOut2, pageOut3, pageIn) {
         document.getElementById("div_container").style.backgroundColor = "red";
     }
     if(pageIn == "creditos"){
-        document.getElementById("div_container").style.backgroundColor = "blue";
+        document.getElementById("div_container").style.backgroundColor = "#E5E5E5";
     }
     //Eliminar hasta acá
     document.getElementById(pageIn).classList.remove("ocultar");
