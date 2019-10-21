@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .body_container {
@@ -40,6 +40,7 @@
     text-align: center;
     position: fixed;
     bottom: 0;
+    z-index: 1;
     border-top-style: solid;
     border-top-width: 2px;
     border-top-color: #49BDC0;
@@ -67,27 +68,30 @@ nav li:hover {
     transition: 1s;
 }
 
-section{
-    padding-top:10px;
+section {
+    position: relative;
+    padding-top: 10px;
 }
 
-.foto_Creador{
+.foto_Creador {
     height: 100px;
     width: 100px;
     border-radius: 50%;
     border-style: solid;
     border-width: 5px;
-    border-color:#49BDC0;
+    border-color: #49BDC0;
 }
-#div_container_creditos{
+
+#div_container_creditos {
     margin-top: 6%;
 }
-#div_creador{
 
+#div_creador {
     margin-left: 32%;
     float: left;
 }
-#div_creador_2{
+
+#div_creador_2 {
     margin-left: 62%;
 }
 
@@ -145,7 +149,7 @@ video {
     max-width: 330px;
     margin: 0;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .carrousel .slides {
@@ -173,21 +177,21 @@ video {
     margin-top: 0;
 }
 
-.carrousel li q {    
+.carrousel li q {
     position: relative;
     top: 5px;
     left: -120px;
     max-width: 100%;
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
     font-size: 23px;
     text-align: left;
 }
 
-.carrousel li q::before{
+.carrousel li q::before {
     content: none;
 }
 
-.carrousel li q::after{
+.carrousel li q::after {
     content: none;
 }
 
@@ -273,8 +277,7 @@ video {
     .carrousel {
         height: 220px;
     }
-    #div_creador{
-
+    #div_creador {
         margin-left: 10%;
         float: left;
     }
@@ -296,4 +299,98 @@ video {
         width: 316px;
         height: 154px;
     }
+}
+
+#articulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgArticulo {
+    display: flex;
+    width: 330px;
+    height: 170px;
+}
+
+.refArticulo {
+    color: #ee6a1e;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.overlay {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    z-index: 1;
+    margin: 70px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup p {
+    z-index: 1;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    text-align: justify;
+}
+
+.popup .close {
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    z-index: 1;
+    color: #06D85F;
+}
+
+.popup .content {
+    z-index: 1;
+    max-height: 60%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        z-index: 1;
+        width: 80%;
+    }
+    .popup {
+        z-index: 1;
+        width: 80%;
+    }
+}
+
+#juego {
+    background: chartreuse;
 }
