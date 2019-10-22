@@ -391,6 +391,26 @@ video {
     }
 }
 
+.tituloSeccion{
+    margin: 0 0 10px 0;
+    display: inline;
+    border-bottom-style: solid;
+    border-bottom-color: #49BDC0;
+    padding: 0 2px 5px 17px;
+}
+
+.nombreCreditos{
+    font-size: 17px;
+    font-weight: bold;
+    color:rgb(20, 193, 199);
+}
+
+.carreraCreditos{
+    font-size: 14px;
+    font-weight: bold;
+    color:rgb(255, 146, 82);
+}
+
 #juego {
     background: chartreuse;
 }
