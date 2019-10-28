@@ -123,7 +123,7 @@ section {
     color: #fff;
 }
 
-#video {
+#cartasCursosUnidades {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +131,11 @@ section {
 
 video {
     width: 330px;
-    height: 150px;
+    height: 196px;
+}
+
+iframe{
+    height: 200px;
 }
 
 #imgCarrusel {
@@ -139,7 +143,7 @@ video {
     height: 150px;
 }
 
-/* Estilos carrusel*/
+/* Estilos carrusel 1*/
 
 .carrousel {
     background: #ffffff;
@@ -180,11 +184,11 @@ video {
 .carrousel li q {
     position: relative;
     top: 5px;
-    left: -120px;
     max-width: 100%;
     color: rgba(0, 0, 0, .87);
-    font-size: 23px;
-    text-align: left;
+    font-size: 16px;
+    text-align: right;
+    font-weight: bold;
 }
 
 .carrousel li q::before {
@@ -202,11 +206,10 @@ video {
 
 .carrousel li span.author {
     position: relative;
-    margin-top: 0.5em;
-    font-size: 1.2em;
-    color: #777777;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ee6a1e;
     display: block;
-    left: -95px;
 }
 
 .carrousel .slidesNavigation {
@@ -214,16 +217,10 @@ video {
     list-style: none;
     text-align: center;
     bottom: 0em;
-    /*--- Centering trick---*/
-    /* Absolute positioning*/
     position: absolute;
-    /* Abosulte positioning*/
     width: 104px;
-    /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
     left: 50%;
-    /*Centering de element*/
     margin-left: -52px;
-    /*adjusting the centering by applying a negative margin of half of the width*/
 }
 
 .carrousel input {
@@ -242,11 +239,6 @@ video {
     font-size: 0;
 }
 
-/* You have to repeat this with each slide
-  TODO: make it easier with SCSS
-  25% movement 100/slides-num
-  */
-
 #radio-1:checked~.slides {
     transform: translateX(0%);
 }
@@ -263,11 +255,25 @@ video {
     transform: translateX(-75%);
 }
 
+#radio-5:checked~.slides2 {
+    transform: translateX(0%);
+}
+
+#radio-6:checked~.slides2 {
+    transform: translateX(-25%);
+}
+
+#radio-7:checked~.slides2 {
+    transform: translateX(-50%);
+}
+
+#radio-8:checked~.slides2 {
+    transform: translateX(-75%);
+}
+
 .carrousel .slidesNavigation label:hover {
     cursor: pointer;
 }
-
-/* You have to repeat this with each slide/dot */
 
 .carrousel #radio-1:checked~.slidesNavigation label#dotForRadio-1, .carrousel #radio-2:checked~.slidesNavigation label#dotForRadio-2, .carrousel #radio-3:checked~.slidesNavigation label#dotForRadio-3, .carrousel #radio-4:checked~.slidesNavigation label#dotForRadio-4 {
     background: #ee6a1e;
@@ -282,7 +288,7 @@ video {
         float: left;
     }
     #div_container {
-        padding-bottom: 100%;
+        padding-bottom: 20%;
         background-color: #E5E5E5;
     }
 }
@@ -296,6 +302,154 @@ video {
         font-size: 1em;
     }
     .carrousel li img {
+        width: 316px;
+        height: 154px;
+    }
+}
+
+/* Estilos carrusel 2 */
+
+.carrousel2 {
+    background: #ffffff;
+    text-align: center;
+    padding: 0;
+    height: 210px;
+    max-width: 330px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrousel2 .slides2 {
+    margin: 0;
+    width: 400%;
+    left: 0;
+    padding-left: 0;
+    padding-top: 0;
+    overflow: hidden;
+    list-style: none;
+    position: relative;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s;
+}
+
+.carrousel2 .slides2 li {
+    width: 25%;
+    position: relative;
+    float: left;
+}
+
+.carrousel2 li p {
+    margin-top: 0;
+}
+
+.carrousel2 li q {
+    position: relative;
+    top: 5px;
+    max-width: 100%;
+    color: rgba(0, 0, 0, .87);
+    font-size: 16px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.carrousel2 li q::before {
+    content: none;
+}
+
+.carrousel2 li q::after {
+    content: none;
+}
+
+.carrousel2 li img {
+    width: 330px;
+    height: 130px;
+}
+
+.carrousel2 li span.author {
+    position: relative;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ee6a1e;
+    display: block;
+}
+
+.carrousel2 .slidesNavigation2 {
+    display: block;
+    list-style: none;
+    text-align: center;
+    bottom: 0em;
+    position: absolute;
+    width: 104px;
+    left: 50%;
+    margin-left: -52px;
+}
+
+.carrousel2 input {
+    display: none;
+}
+
+.carrousel2 .slidesNavigation2 label {
+    float: left;
+    margin: 6px;
+    display: block;
+    height: 13px;
+    width: 13px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: solid 2px #2980b9;
+    font-size: 0;
+}
+
+#radio-5:checked~.slides2 {
+    transform: translateX(0%);
+}
+
+#radio-6:checked~.slides2 {
+    transform: translateX(-25%);
+}
+
+#radio-7:checked~.slides2 {
+    transform: translateX(-50%);
+}
+
+#radio-8:checked~.slides2 {
+    transform: translateX(-75%);
+}
+
+.carrousel2 .slidesNavigation2 label:hover {
+    cursor: pointer;
+}
+
+.carrousel2 #radio-5:checked~.slidesNavigation2 label#dotForRadio-5, .carrousel2 #radio-6:checked~.slidesNavigation2 label#dotForRadio-6, .carrousel2 #radio-7:checked~.slidesNavigation2 label#dotForRadio-7, .carrousel2 #radio-8:checked~.slidesNavigation2 label#dotForRadio-8 {
+    background: #ee6a1e;
+}
+
+@media (max-width: 796px) {
+    .carrousel2 {
+        height: 220px;
+    }
+    #div_creador {
+        margin-left: 10%;
+        float: left;
+    }
+    #div_container {
+        padding-bottom: 20%;
+        background-color: #E5E5E5;
+    }
+}
+
+@media (max-width: 330px) {
+    .carrousel2 li p {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    .carrousel2 li q {
+        font-size: 1em;
+    }
+    .carrousel2 li img {
         width: 316px;
         height: 154px;
     }
@@ -391,26 +545,46 @@ video {
     }
 }
 
-.tituloSeccion{
+.tituloSeccion {
     margin: 0 0 10px 0;
     display: inline;
     border-bottom-style: solid;
     border-bottom-color: #49BDC0;
     padding: 0 2px 5px 17px;
+    font-size: 16px;
 }
 
-.nombreCreditos{
+.nombreCreditos {
     font-size: 17px;
     font-weight: bold;
-    color:rgb(20, 193, 199);
+    color: rgb(20, 193, 199);
 }
 
-.carreraCreditos{
+.carreraCreditos {
     font-size: 14px;
     font-weight: bold;
-    color:rgb(255, 146, 82);
+    color: rgb(255, 146, 82);
 }
 
 #juego {
     background: chartreuse;
+}
+
+.tituloUnidad{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #ee6a1e;
+    margin: 0;
+}
+
+.textoUnidad{
+    margin: 0 30px 0 30px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.textoForoUnidad{
+    font-size: 16px;
+    color: #ee6a1e;
 }
