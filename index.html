@@ -36,7 +36,8 @@
                                 <ul class="slides">
                                     <li class="slide">
                                         <p>
-                                            <img src="img/yage.jpg">
+                                            <img src="img/yage.jpg"
+                                                onclick="navegacionCursos('feedCursos','unidadesCurso1','unidad2Curso1','unidad3Curso1','unidad4Curso1','unidad1Curso1');">
                                             <q>Curso 1: Introducción a la cultura indígena</q>
                                             <span class="author">
                                                 Unidad 1: El yagé
@@ -45,7 +46,8 @@
                                     </li>
                                     <li class="slide">
                                         <p>
-                                            <img src="img/baile.jpg">
+                                            <img src="img/baile.jpg"
+                                                onclick="navegacionCursos('feedCursos','unidadesCurso1','unidad1Curso1','unidad3Curso1','unidad4Curso1','unidad2Curso1');">
                                             <q>Curso 1: Introducción a la cultura indígena</q>
                                             <span class="author">
                                                 Unidad 2: Baile chimila
@@ -54,7 +56,8 @@
                                     </li>
                                     <li class="slide">
                                         <p>
-                                            <img src="img/indigena.jpg">
+                                            <img src="img/indigena.jpg"
+                                                onclick="navegacionCursos('feedCursos','unidadesCurso1','unidad1Curso1','unidad2Curso1','unidad4Curso1','unidad3Curso1');">
                                             <q>Curso 1: Introducción a la cultura indígena</q>
                                             <span class="author">
                                                 Unidad 3: Pintura indigena
@@ -63,7 +66,8 @@
                                     </li>
                                     <li class="slide">
                                         <p>
-                                            <img src="img/vivienda.jpg">
+                                            <img src="img/vivienda.jpg"
+                                                onclick="navegacionCursos('feedCursos','unidadesCurso1','unidad1Curso1','unidad2Curso1','unidad3Curso1','unidad4Curso1');">
                                             <q>Curso 1: Introducción a la cultura indígena</q>
                                             <span class="author">
                                                 Unidad 4: Casa indigena
@@ -144,11 +148,14 @@
 
             <section id="unidadesCurso1" class="ocultar">
                 <br>
-                <p class="tituloSeccion">Atrás</p>
+                <p class="tituloSeccion"
+                    onclick="navegacionCursos('unidadesCurso1','unidad2Curso1','unidad3Curso1','unidad4Curso1','unidad1Curso1','feedCursos');">
+                    Atrás</p>
                 <section id="unidad1">
                     <div id="cartasCursosUnidades">
                         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                            <img src="img/yage.jpg" id="imgArticulo">
+                            <img src="img/yage.jpg" id="imgArticulo"
+                                onclick="navegacionCursos('feedCursos','unidadesCurso1','unidad2Curso1','unidad3Curso1','unidad4Curso1','unidad1Curso1');">
                             <div class="mdl-card__actions mdl-card--border">
                                 <h2 class="mdl-card__title-text">Unidad 1: El Yagé</h2>
                                 </br>
@@ -161,7 +168,8 @@
                 <section id="unidad2">
                     <div id="cartasCursosUnidades">
                         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                            <img src="img/baile.jpg" id="imgArticulo">
+                            <img src="img/baile.jpg" id="imgArticulo"
+                                onclick="navegacionCursos('feedCursos','unidadesCurso1','unidad1Curso1','unidad3Curso1','unidad4Curso1','unidad2Curso1');">
                             <div class="mdl-card__actions mdl-card--border">
                                 <h2 class="mdl-card__title-text">Unidad 2: Baile Chimila</h2>
                                 </br>
@@ -174,7 +182,8 @@
                 <section id="unidad3">
                     <div id="cartasCursosUnidades">
                         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                            <img src="img/indigena.jpg" id="imgArticulo">
+                            <img src="img/indigena.jpg" id="imgArticulo"
+                                onclick="navegacionCursos('feedCursos','unidadesCurso1','unidad1Curso1','unidad2Curso1','unidad4Curso1','unidad3Curso1');">
                             <div class="mdl-card__actions mdl-card--border">
                                 <h2 class="mdl-card__title-text">Unidad 3: Pintura indígena</h2>
                                 </br>
@@ -187,7 +196,8 @@
                 <section id="unidad4">
                     <div id="cartasCursosUnidades">
                         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                            <img src="img/vivienda.jpg" id="imgArticulo">
+                            <img src="img/vivienda.jpg" id="imgArticulo"
+                                onclick="navegacionCursos('feedCursos','unidadesCurso1','unidad1Curso1','unidad2Curso1','unidad3Curso1','unidad4Curso1');">
                             <div class="mdl-card__actions mdl-card--border">
                                 <h2 class="mdl-card__title-text">Unidad 4: Vivienda indígena</h2>
                                 </br>
@@ -200,7 +210,11 @@
             </section>
 
             <section id="unidad1Curso1" class="ocultar">
-                <p class="tituloSeccion">Atrás</p>
+                <p class="tituloSeccion"
+                    onclick="navegacionCursos('feedCursos','unidad2Curso1','unidad3Curso1','unidad4Curso1','unidad1Curso1','unidadesCurso1');">
+                    Atrás</p>
+                </br>
+                </br>
                 <div id="cartasCursosUnidades">
                     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                         <video controls>
@@ -223,7 +237,11 @@
             </section>
 
             <section id="unidad2Curso1" class="ocultar">
-                <p class="tituloSeccion">Atrás</p>
+                <p class="tituloSeccion"
+                    onclick="navegacionCursos('feedCursos','unidad2Curso1','unidad3Curso1','unidad4Curso1','unidad1Curso1','unidadesCurso1');">
+                    Atrás</p>
+                </br>
+                </br>
                 <div id="cartasCursosUnidades">
                     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                         <iframe src="https://www.youtube.com/embed/Uf00F4YXAPk"></iframe>
@@ -244,7 +262,11 @@
             </section>
 
             <section id="unidad3Curso1" class="ocultar">
-                <p class="tituloSeccion">Atrás</p>
+                <p class="tituloSeccion"
+                    onclick="navegacionCursos('feedCursos','unidad2Curso1','unidad3Curso1','unidad4Curso1','unidad1Curso1','unidadesCurso1');">
+                    Atrás</p>
+                </br>
+                </br>
                 <div id="cartasCursosUnidades">
                     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                         <iframe src="https://www.youtube.com/embed/2YQ1BZEfmdw"></iframe>
@@ -265,7 +287,11 @@
             </section>
 
             <section id="unidad4Curso1" class="ocultar">
-                <p class="tituloSeccion">Atrás</p>
+                <p class="tituloSeccion"
+                    onclick="navegacionCursos('feedCursos','unidad2Curso1','unidad3Curso1','unidad4Curso1','unidad1Curso1','unidadesCurso1');">
+                    Atrás</p>
+                </br>
+                </br>
                 <div id="cartasCursosUnidades">
                     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                         <iframe src="https://www.youtube.com/embed/B7l6YJUJl7A"></iframe>
