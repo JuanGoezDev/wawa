@@ -2,7 +2,7 @@
 <html lang="en">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <style>
-            #div_container{
+            #div_container_login{
                 margin-left: 10%;
                 margin-right: 10%;
                 margin-top:5%;
@@ -11,6 +11,17 @@
                 border-color: black;
                 border-radius: 20px;
             }
+
+            #div_container_resetPassword{
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top:5%;
+                padding:10%;
+                border-style: solid;
+                border-color: black;
+                border-radius: 20px;
+            }
+
             input{
                 margin-bottom: 10px;
             }
@@ -26,7 +37,7 @@
         <title>WAWA Login</title>
     </head>
     <body>
-        <div id="div_container">
+        <div id="div_container_login">
             <h1>Log in - Sign up Test Firebase WAWA</h1>
 
             <input id="txtEmail" class="form-control" type="email" placeholder="Email">
@@ -41,7 +52,13 @@
 
             <h2 id="h2_logState"></h2>
 
+        </div>
 
+        <div id="div_container_resetPassword">
+                <h1>Restore password Test Firebase WAWA</h1>
+                <input id="txtEmail_reset" class="form-control" type="email" placeholder="Email"><br>
+                <button id="btnResetPassword" class="btn btn-outline-primary"> Send reset message</button>
+                <h2 id="h2_resetState"></h2>
         </div>
     </body>
 
@@ -67,10 +84,15 @@
         //trae los elementos necesarios del DOM
         const txtEmail = document.getElementById("txtEmail");
         const txtPassword = document.getElementById("txtPassword");
+        const txtEmailReset= document.getElementById("txtEmail_reset");
+
         const btnLogin = document.getElementById("btnLogin");
         const btnSignUp = document.getElementById("btnSignUp");
         const btnLogout = document.getElementById("btnLogout");
+        const btnReset = document.getElementById("btnResetPassword");
+
         const h2State = document.getElementById("h2_logState");
+        const h2Reset = document.getElementById("h2_resetState");
 
         //agregacion del evento login
         btnLogin.addEventListener('click', e=>{
@@ -106,6 +128,18 @@
         //agregacion del evento logout
         btnLogout.addEventListener('click', e=>{
             firebase.auth().signOut();
+        });
+
+        btnReset.addEventListener('click', e=>{
+            const email = txtEmailReset.value;
+            const auth = firebase.auth();
+            h2Reset.innerHTML = "if the email exist, you will receive a message";
+
+            const promise = auth.sendPasswordResetEmail(email);
+            promise.catch(e=>{
+                console.log(e);
+                alert(e);
+            });
         });
 
         //respuestas de firebase con su cambio de estado
