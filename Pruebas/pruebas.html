@@ -5,7 +5,7 @@
             #div_container{
                 margin-left: 10%;
                 margin-right: 10%;
-                margin-top:25%;
+                margin-top:10%;
                 padding:10%;
                 border-style: solid;
                 border-color: black;
@@ -23,6 +23,8 @@
     </head>
     <body>
         <div id="div_container">
+            <h1>Log in - Sign up Test Firebase WAWA</h1>
+
             <input id="txtEmail" class="form-control" type="email" placeholder="Email">
 
             <input id="txtPassword" class="form-control" type="password" placeholder="Password"> <br>
@@ -72,7 +74,10 @@
 
             //sign in
             const promise = auth.signInWithEmailAndPassword(email,pass);
-            promise.catch(e=> console.log(e));
+            promise.catch(e=> {
+                console.log(e);
+                alert(e);
+                });
 
         });
 
@@ -85,7 +90,10 @@
 
             //sign up
             const promise = auth.createUserWithEmailAndPassword(email,pass);
-            promise.catch(e=> console.log(e));
+            promise.catch(e=> {
+                console.log(e);
+                alert(e);
+                });
         });
 
         //agregacion del evento logout
@@ -97,6 +105,7 @@
         firebase.auth().onAuthStateChanged(firebaseUser =>{
             if(firebaseUser){
                 console.log("logged in");
+                alert("logged in");
                 console.log(firebaseUser);
                 btnLogin.className ="btn btn-outline-primary  invisible";
                 btnSignUp.className ="btn btn-outline-primary  invisible";
@@ -104,6 +113,7 @@
             }
             else{
                 console.log('not logged in');
+                alert("not Logged in");
                 btnLogin.className ="btn btn-outline-primary";
                 btnSignUp.className ="btn btn-outline-primary";
                 btnLogout.className ="btn btn-outline-primary  invisible";
