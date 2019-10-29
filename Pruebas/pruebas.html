@@ -5,7 +5,7 @@
             #div_container{
                 margin-left: 10%;
                 margin-right: 10%;
-                margin-top:10%;
+                margin-top:5%;
                 padding:10%;
                 border-style: solid;
                 border-color: black;
@@ -14,12 +14,16 @@
             input{
                 margin-bottom: 10px;
             }
+
+            #h2_logState{
+                margin-top: 10px;
+            }
         </style>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>WAWA Login</title>
     </head>
     <body>
         <div id="div_container">
@@ -34,6 +38,8 @@
             <button id="btnSignUp" class="btn btn-outline-secondary">Sign Up</button>
 
             <button id="btnLogout" class="btn btn-outline-primary invisible">Log out</button>
+
+            <h2 id="h2_logState"></h2>
 
 
         </div>
@@ -64,6 +70,7 @@
         const btnLogin = document.getElementById("btnLogin");
         const btnSignUp = document.getElementById("btnSignUp");
         const btnLogout = document.getElementById("btnLogout");
+        const h2State = document.getElementById("h2_logState");
 
         //agregacion del evento login
         btnLogin.addEventListener('click', e=>{
@@ -106,7 +113,7 @@
             if(firebaseUser){
                 console.log("logged in");
                 alert("logged in");
-                console.log(firebaseUser);
+                h2State.innerHTML = "Sesión iniciada";
                 btnLogin.className ="btn btn-outline-primary  invisible";
                 btnSignUp.className ="btn btn-outline-primary  invisible";
                 btnLogout.className ="btn btn-outline-primary";
@@ -114,6 +121,7 @@
             else{
                 console.log('not logged in');
                 alert("not Logged in");
+                h2State.innerHTML = "";
                 btnLogin.className ="btn btn-outline-primary";
                 btnSignUp.className ="btn btn-outline-primary";
                 btnLogout.className ="btn btn-outline-primary  invisible";
