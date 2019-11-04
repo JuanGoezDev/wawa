@@ -59,12 +59,12 @@
     //extraccion de documentos
     db.collection("Foro_Modulo1").get().then((querySnapshot)=> {
         querySnapshot.forEach( (doc) => {
-            console.log(`${doc.id} => ${doc.data().Fecha.seconds}`);
+            console.log(`${doc.id} => ${new Date(doc.data().Fecha.seconds*1000)}`);
             document.getElementById('div_foro').innerHTML +=`------------------------------
                                                             <h1>${doc.data().Usuario}</h1>
                                                              <h2>Curso ${doc.data().Curso}</h2>
                                                              <h2>Unidad ${doc.data().Unidad}</h2>
-                                                             <h3>Fecha ${new Date(doc.data().Fecha.seconds)}</h3>
+                                                             <h3>Fecha ${new Date(doc.data().Fecha.seconds*1000)}</h3>
                                                              <p>${doc.data().Comentario}</p>
                                                              -------------------------------  <br>
                                                              `;
