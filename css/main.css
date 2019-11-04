@@ -134,7 +134,7 @@ video {
     height: 196px;
 }
 
-iframe{
+iframe {
     height: 200px;
 }
 
@@ -208,7 +208,7 @@ iframe{
     position: relative;
     margin-top: 5px;
     font-size: 16px;
-    color: #ee6a1e;
+    color: #E55712;
     display: block;
 }
 
@@ -276,7 +276,7 @@ iframe{
 }
 
 .carrousel #radio-1:checked~.slidesNavigation label#dotForRadio-1, .carrousel #radio-2:checked~.slidesNavigation label#dotForRadio-2, .carrousel #radio-3:checked~.slidesNavigation label#dotForRadio-3, .carrousel #radio-4:checked~.slidesNavigation label#dotForRadio-4 {
-    background: #ee6a1e;
+    background: #E55712;
 }
 
 @media (max-width: 796px) {
@@ -372,7 +372,7 @@ iframe{
     position: relative;
     margin-top: 5px;
     font-size: 16px;
-    color: #ee6a1e;
+    color: #E55712;
     display: block;
 }
 
@@ -424,7 +424,7 @@ iframe{
 }
 
 .carrousel2 #radio-5:checked~.slidesNavigation2 label#dotForRadio-5, .carrousel2 #radio-6:checked~.slidesNavigation2 label#dotForRadio-6, .carrousel2 #radio-7:checked~.slidesNavigation2 label#dotForRadio-7, .carrousel2 #radio-8:checked~.slidesNavigation2 label#dotForRadio-8 {
-    background: #ee6a1e;
+    background: #E55712;
 }
 
 @media (max-width: 796px) {
@@ -468,7 +468,7 @@ iframe{
 }
 
 .refArticulo {
-    color: #ee6a1e;
+    color: #E55712;
     text-decoration: none;
     font-style: italic;
 }
@@ -546,7 +546,7 @@ iframe{
 }
 
 .tituloSeccion {
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
     display: inline;
     border-bottom-style: solid;
     border-bottom-color: #49BDC0;
@@ -563,28 +563,81 @@ iframe{
 .carreraCreditos {
     font-size: 14px;
     font-weight: bold;
-    color: rgb(255, 146, 82);
+    color: #E55712;
 }
 
-#juego {
-    background: chartreuse;
-}
-
-.tituloUnidad{
+.tituloUnidad {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    color: #ee6a1e;
+    color: #E55712;
     margin: 0;
 }
 
-.textoUnidad{
+.textoUnidad {
     margin: 0 30px 0 30px;
     text-align: justify;
     font-size: 16px;
 }
 
-.textoForoUnidad{
+.textoForoUnidad {
     font-size: 16px;
-    color: #ee6a1e;
+    color: #E55712;
+}
+
+.logoWawaPrincipal {
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 50px;
+}
+
+.headerWawa {
+    text-align: center;
+    font-weight: bold;
+}
+
+.mdl-textfield__label {
+    color: #E55712;
+}
+
+.mdl-button--raised.mdl-button--colored {
+    background: #E55712 !important;
+    color: rgb(255, 255, 255);
+}
+
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+    color: #E55712 !important;
+}
+
+.mdl-textfield__label:after {
+    background-color: #E55712 !important;
+}
+
+.textoInicioWawa {
+    display: block;
+    text-align: center;
+}
+
+a{
+    color:#E55712 !important;
+}
+
+#tituloPublicacion{
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#comentarioPublicacion{
+    margin: 0 10px 0 10px;
+    font-size: 15px;
+    text-align: justify;    
+}
+
+#fechaPublicacion{
+    font-size: 12px;
+    text-align: left;
+    color: #E55712 !important;
 }

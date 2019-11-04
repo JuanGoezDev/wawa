@@ -58,3 +58,11 @@ function navegacionCursos(pageOut1,pageOut2,pageOut3,pageOut4,pageOut5, pageIn) 
     document.getElementById(pageIn).classList.remove("ocultar");
     window.scroll(0, document.getElementById(pageIn).scrollTop);
 }
+
+function foroSeccion(pageOut, pageIn) {
+    if(document.getElementById(pageOut).className != "ocultar"){
+        document.getElementById(pageOut).className += " ocultar";
+    }    
+    document.getElementById(pageIn).classList.remove("ocultar");
+    window.scroll(0, document.getElementById(pageIn).scrollTop);
+}

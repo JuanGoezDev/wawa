@@ -19,6 +19,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -36,15 +37,16 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
     </script>
-
 </head>
 
 <body class="body_container">
 
     <section id="inicioWawa">
         <section id="loginWawa">
-            <img src="img/wawa.png">
-            <h5>Inicio de sesión</h5>
+            </br>
+            </br>
+            <img class="logoWawaPrincipal" src="img/wawa.png">
+            <h5 class="headerWawa">Inicio de sesión</h5>
             <div class="mdl-card__supporting-text">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="email" id="emailLogin" />
@@ -63,13 +65,18 @@
                     Ingresar
                 </button>
             </div>
-            <a onclick="inicioWawa('loginWawa', 'registroWawa', 'recuperarWawa');">¿Olvidaste tu contraseña?</a><br>
-            <span>¿No tienes una cuenta?<a onclick="inicioWawa('loginWawa', 'recuperarWawa', 'registroWawa');">¡Registrate!</a></span>
+            <a class="textoInicioWawa" onclick="inicioWawa('loginWawa', 'registroWawa', 'recuperarWawa');">¿Olvidaste tu
+                contraseña?</a><br>
+            <span class="textoInicioWawa">¿No tienes una cuenta?<a
+                    onclick="inicioWawa('loginWawa', 'recuperarWawa', 'registroWawa');"> ¡Registrate!</a></span>
         </section>
 
         <section id="registroWawa" class="ocultar">
-            <img src="img/wawa.png">
-            <h5>¡Regístrate gratis!</h5>
+            </br>
+            </br>
+            </br>
+            <img class="logoWawaPrincipal" src="img/wawa.png">
+            <h5 class="headerWawa">¡Regístrate gratis!</h5>
             <div class="mdl-card__supporting-text">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="email" id="emailRegistro" />
@@ -92,11 +99,23 @@
                     Registrarse
                 </button>
             </div>
+            <div class="mdl-grid">
+                <button
+                    class="mdl-cell mdl-cell--12-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white"
+                    onclick="inicioWawa('recuperarWawa', 'registroWawa', 'loginWawa');">
+                    Atrás
+                </button>
+            </div>
         </section>
 
         <section id="recuperarWawa" class="ocultar">
-            <img src="img/wawa.png">
-            <h5>Reestablece  tu contraseña</h5>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            <img class="logoWawaPrincipal" src="img/wawa.png">
+            <h5 class="headerWawa">Reestablece tu contraseña</h5>
             <div class="mdl-card__supporting-text">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="email" id="emailRecuperar" />
@@ -111,6 +130,13 @@
                     Reestablecer contraseña
                 </button>
             </div>
+            <div class="mdl-grid">
+                <button
+                    class="mdl-cell mdl-cell--12-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white"
+                    onclick="inicioWawa('recuperarWawa', 'registroWawa', 'loginWawa');">
+                    Atrás
+                </button>
+            </div>
         </section>
     </section>
 
@@ -123,7 +149,6 @@
                 </header>
 
                 <section id="feedCursos">
-                    <br>
                     <p class="tituloSeccion">Continúa con tu curso</p>
                     <section id="carruselCurso1">
                         <div id="cartasCursosUnidades">
@@ -338,7 +363,7 @@
                     </br>
                     <p class="textoUnidad">Si te gustaría compartir información relacionada a esta unidad, puedes dejar
                         tu
-                        aporte en <span class="textoForoUnidad">nuestro foro</span></p>
+                        aporte en <span class="textoForoUnidad" onclick="page('cursos','articulos','creditos','foro');">nuestro foro</span></p>
                 </section>
 
                 <section id="unidad2Curso1" class="ocultar">
@@ -368,7 +393,7 @@
                     </br>
                     <p class="textoUnidad">Si te gustaría compartir información relacionada a esta unidad, puedes dejar
                         tu
-                        aporte en <span class="textoForoUnidad">nuestro foro</span></p>
+                        aporte en <span class="textoForoUnidad" onclick="page('cursos','articulos','creditos','foro');">nuestro foro</span></p>
                 </section>
 
                 <section id="unidad3Curso1" class="ocultar">
@@ -398,7 +423,7 @@
                     </br>
                     <p class="textoUnidad">Si te gustaría compartir información relacionada a esta unidad, puedes dejar
                         tu
-                        aporte en <span class="textoForoUnidad">nuestro foro</span></p>
+                        aporte en <span class="textoForoUnidad" onclick="page('cursos','articulos','creditos','foro');">nuestro foro</span></p>
                 </section>
 
                 <section id="unidad4Curso1" class="ocultar">
@@ -428,7 +453,7 @@
                     </br>
                     <p class="textoUnidad">Si te gustaría compartir información relacionada a esta unidad, puedes dejar
                         tu
-                        aporte en <span class="textoForoUnidad">nuestro foro</span></p>
+                        aporte en <span class="textoForoUnidad" onclick="page('cursos','articulos','creditos','foro');">nuestro foro</span></p>
                 </section>
 
             </section>
@@ -437,6 +462,7 @@
                 <header class="header_title">
                     <h3 class="header_content">Artículos</h3>
                 </header>
+                </br>
                 <p class="tituloSeccion">Artículos</p>
                 <section id="articulo1">
                     <div id="articulo">
@@ -585,13 +611,59 @@
                 </div>
             </section>
 
-            <section id="foro" class="ocultar"></section>
+            <section id="foro" class="ocultar">
+                <header class="header_title">
+                    <h3 class="header_content">Foro</h3>
+                </header>
+                </br>
+                <section id="publicarForo">
+                    <p class="tituloSeccion">Publicar comentario</p>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="input_nombre" />
+                            <label class="mdl-textfield__label">Nombre</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="number" id="input_curso" />
+                            <label class="mdl-textfield__label">Número de curso</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="number" id="input_unidad" />
+                            <label class="mdl-textfield__label">Número de unidad</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows="3"
+                                id="input_comentario"></textarea>
+                            <label class="mdl-textfield__label">Ingresa tu comentario</label>
+                        </div>
+                    </div>
+                    <button
+                        class="mdl-cell mdl-cell--12-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white"
+                        onclick="enviarComentario();">
+                        Publicar
+                    </button>
+                    <button
+                        class="mdl-cell mdl-cell--12-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white"
+                        onclick="foroSeccion('publicarForo', 'publicacionesForo');">
+                        Ver publicaciones
+                    </button>
+                </section>
+
+                <section id="publicacionesForo" class="ocultar">                    
+                    <div id="div_foro"></div>
+                    <button
+                        class="mdl-cell mdl-cell--12-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white"
+                        onclick="foroSeccion('publicacionesForo', 'publicarForo');">
+                        Atrás
+                    </button>
+                </section>
+
+            </section>
 
             <section id="creditos" class="ocultar">
                 <header class="header_title">
                     <h3 class="header_content">Créditos</h3>
                 </header>
-                </br>
                 </br>
                 <div id="div_container_creditos">
                     <div id="div_creador">
