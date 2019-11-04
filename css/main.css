@@ -33,7 +33,7 @@
 
 #div_container {
     padding-bottom: 40%;
-    background-color: #E5E5E5;
+    background-color: #fff;
 }
 
 .main-navigation {
@@ -274,7 +274,7 @@ iframe {
     }
     #div_container {
         padding-bottom: 20%;
-        background-color: #E5E5E5;
+        background-color: #fff;
     }
 }
 
