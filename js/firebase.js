@@ -139,13 +139,14 @@ function enviarComentario() {
 db.collection("Foro_Modulo1").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${new Date(doc.data().Fecha.seconds * 1000)}`);
+        let date = new Date(doc.data().Fecha.seconds * 1000);
         document.getElementById('div_foro').innerHTML += `
     <div id="articulo">
         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
             <h5 id="tituloPublicacion">${doc.data().Usuario}, Curso ${doc.data().Curso} - Unidad ${doc.data().Unidad}</h5><br>
             <span id="comentarioPublicacion">${doc.data().Comentario}</span>
             <div class="mdl-card__actions mdl-card--border">
-                <span id="fechaPublicacion">${new Date(doc.data().Fecha.seconds * 1000)}</span>
+                <span id="fechaPublicacion">${date.toLocaleString()}</span>
             </div>
         </div>
     </div>
