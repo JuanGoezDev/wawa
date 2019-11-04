@@ -41,7 +41,6 @@
 
     function enviarComentario()
     {   
-        if(document.getElementById("input_nombre") & document.getElementById("input_curso") & document.getElementById("input_unidad") & document.getElementById("input_comentario")){
             db.collection("Foro_Modulo1").add({
                 Usuario: document.getElementById("input_nombre").value,
                 Fecha: new Date(),
@@ -55,32 +54,37 @@
             .catch( (error)=>{
                 console.log("error adding document ",error);
             });
-        }
-        else{
-            console.log("rellene los campos");
-        }
-        
-            
     }
 
     //extraccion de documentos
     db.collection("Foro_Modulo1").get().then((querySnapshot)=> {
         querySnapshot.forEach( (doc) => {
-            console.log(`${doc.id} => ${doc.data().Usuario}`);
+            console.log(`${doc.id} => ${doc.data().Fecha.seconds}`);
+            document.getElementById('div_foro').innerHTML +=`------------------------------
+                                                            <h1>${doc.data().Usuario}</h1>
+                                                             <h2>Curso ${doc.data().Curso}</h2>
+                                                             <h2>Unidad ${doc.data().Unidad}</h2>
+                                                             <h3>Fecha ${new Date(doc.data().Fecha.seconds)}</h3>
+                                                             <p>${doc.data().Comentario}</p>
+                                                             -------------------------------  <br>
+                                                             `;
+            
         });
-    })
+        document.getElementById('div_foro').innerHTML += `  <h2>Nombre</h2>
+                                                            <input id="input_nombre"></input>
+                                                            <h2>Curso</h2>
+                                                            <input id="input_curso"></input>
+                                                            <h2>Unidad</h2>
+                                                            <input id="input_unidad"></input>
+                                                            <h2>Comentario</h2>
+                                                            <input id="input_comentario"></input><br><br>
+                                                            <button onclick="enviarComentario()">Enviar comentario</button><br>`
+    });
 </script>
 <body>
-
-    <h2>Nombre</h2>
-    <input id="input_nombre"></input>
-    <h2>Curso</h2>
-    <input id="input_curso"></input>
-    <h2>Unidad</h2>
-    <input id="input_unidad"></input>
-    <h2>Comentario</h2>
-    <input id="input_comentario"></input><br><br>
-    <button onclick="enviarComentario()">Enviar comentario</button>
+    <div id="div_foro"></div>
+    
+ 
     
 </body>
 </html>
