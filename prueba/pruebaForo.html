@@ -40,32 +40,35 @@
     //operaciones con firebasestore
 
     function enviarComentario()
-    {
-        db.collection("Foro_Modulo1").add({
-            Usuario: document.getElementById("input_nombre").value,
-            Fecha: new Date(),
-            Curso: document.getElementById("input_curso").value,
-            Unidad: document.getElementById("input_unidad").value,
-            Comentario: document.getElementById("input_comentario").value
-        })
-        .then( (docRef)=>{
-            console.log("document written with ID ",docRef.id);
-        })
-        .catch( (error)=>{
-            console.log("error adding document ",error);
-        });
-    }
-    function prueba(){
-        let obj = {
-            Usuario: document.getElementById("input_nombre").value,
-            Fecha: new Date(),
-            Curso: document.getElementById("input_curso").value,
-            Unidad: document.getElementById("input_unidad").value,
-            Comentario: document.getElementById("input_comentario").value
+    {   
+        if(document.getElementById("input_nombre") & document.getElementById("input_curso") & document.getElementById("input_unidad") & document.getElementById("input_comentario")){
+            db.collection("Foro_Modulo1").add({
+                Usuario: document.getElementById("input_nombre").value,
+                Fecha: new Date(),
+                Curso: document.getElementById("input_curso").value,
+                Unidad: document.getElementById("input_unidad").value,
+                Comentario: document.getElementById("input_comentario").value
+            })
+            .then( (docRef)=>{
+                console.log("document written with ID ",docRef.id);
+            })
+            .catch( (error)=>{
+                console.log("error adding document ",error);
+            });
         }
-        console.log(obj);
+        else{
+            console.log("rellene los campos");
+        }
+        
+            
     }
 
+    //extraccion de documentos
+    db.collection("Foro_Modulo1").get().then((querySnapshot)=> {
+        querySnapshot.forEach( (doc) => {
+            console.log(`${doc.id} => ${doc.data().Usuario}`);
+        });
+    })
 </script>
 <body>
 
