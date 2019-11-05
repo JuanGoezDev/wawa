@@ -131,7 +131,8 @@ function enviarComentario() {
             document.getElementById("input_nombre").value = "";
             document.getElementById("input_curso").value = "";
             document.getElementById("input_unidad").value = "";
-            document.getElementById("input_comentario").value = "";      
+            document.getElementById("input_comentario").value = "";
+            actualizar();
         })
         .catch((error) => {
             console.log("error adding document ", error);
@@ -157,3 +158,7 @@ db.collection("Foro_Modulo1").get().then((querySnapshot) => {
     `;
     });
 });
+
+function actualizar() {
+    location.reload();
+}
