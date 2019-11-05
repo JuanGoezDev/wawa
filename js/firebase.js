@@ -128,6 +128,10 @@ function enviarComentario() {
     })
         .then((docRef) => {
             console.log("document written with ID ", docRef.id);
+            document.getElementById("input_nombre").value = "";
+            document.getElementById("input_curso").value = "";
+            document.getElementById("input_unidad").value = "";
+            document.getElementById("input_comentario").value = "";      
         })
         .catch((error) => {
             console.log("error adding document ", error);
