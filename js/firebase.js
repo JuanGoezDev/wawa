@@ -142,7 +142,6 @@ function enviarComentario() {
 //extraccion de documentos
 db.collection("Foro_Modulo1").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${new Date(doc.data().Fecha.seconds * 1000)}`);
         let date = new Date(doc.data().Fecha.seconds * 1000);
         document.getElementById('div_foro').innerHTML += `
     <div id="articulo">
