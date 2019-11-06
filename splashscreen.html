@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    img{
+        position: fixed;
+        margin-top:80%;
+        margin-left: 13%;
+        width: 250px;
+        height: 50px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WAWA</title>
+</head>
+<body onload="espera()">
+    <img src="img/wawa.png">
+</body>
+<script>
+
+    function espera(){
+        setInterval(cambioVista,3000)
+    }
+    function cambioVista(){
+        location.href="index.html";
+    }
+</script>
+</html>
